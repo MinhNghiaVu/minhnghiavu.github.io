@@ -39,6 +39,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Clear Parcel cache
+        run: rm -rf .parcel-cache
+
       - name: Install dependencies
         run: npm install
 
